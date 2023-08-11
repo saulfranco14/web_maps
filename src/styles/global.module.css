@@ -1,0 +1,5 @@
+/* global.module.css */
+.global-styles {
+    --gray-500: #667085;
+    --white: #FFF;
+}
