@@ -1,0 +1,9 @@
+.text_h1{
+    color: var(--gray-900, #101828);
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 72px; /* 120% */
+    letter-spacing: -1.2px;
+    width: 43vw;
+}

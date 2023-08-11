@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import styles from "@/styles/components/header.module.css";
 import Button from "@/components/Buttons";
 import { headerItems } from "@/utils/components/header";
@@ -39,12 +38,12 @@ const Header = () => {
         <Button
           text="Login"
           onClick={handleClick}
-          typeCss={"button_login"}
+          typeCss={"button_white"}
         />
         <Button
           text="Sign up"
           onClick={handleClick}
-          typeCss={"button_sign_up"}
+          typeCss={"button_blue"}
         />
       </div>
     </section>

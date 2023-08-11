@@ -1,4 +1,4 @@
-.button_sign_up{
+.button_blue {
     border-radius: 8px;
     border: 1px solid var(--blue-600, #1570EF);
     background: var(--blue-600, #1570EF);
@@ -13,18 +13,36 @@
     color: white;
 }
 
-.button_login{
+.button_white {
     display: flex;
     padding: 10px 18px;
     justify-content: center;
     align-items: center;
     gap: 8px;
     border-radius: 8px;
-    color:  #667085;
+    color: #667085;
     font-family: 'Inter', sans-serif;
     font-family: Inter;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
+}
+
+.button_play {
+    border-radius: 8px;
+    border: 1px solid var(--gray-300, #D0D5DD);
+    background: var(--base-white, #FFF);
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    display: flex;
+    padding: 16px 28px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    color: var(--gray-700, #344054);
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+    margin-right: 10px;
 }
