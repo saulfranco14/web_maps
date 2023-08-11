@@ -8,7 +8,7 @@ const Button = ({ text, onClick, type, typeCss, icon }) => {
   return (
     <button className={styles[typeCss]} onClick={onClick} type={type}>
       {icon && (
-        <span className="mr-2">
+        <span className="mr-2" style={{ width: '20px', height:'20px'}}>
           <Image src={`/images/${icon}`} alt="Icon" width={20} height={20} />
         </span>
       )}
