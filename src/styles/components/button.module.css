@@ -46,3 +46,18 @@
     line-height: 28px; /* 155.556% */
     margin-right: 10px;
 }
+
+
+@media only screen and (max-width: 768px) {
+
+    .button_play{
+        height: 48px;
+        margin-right: 0px;
+    }
+
+    .button_blue{
+        height: 48px;
+    }
+
+}
+

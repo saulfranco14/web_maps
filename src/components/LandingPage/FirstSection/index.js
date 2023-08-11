@@ -60,6 +60,15 @@ const FirsSection = () => {
               priority
             />
       </div>
+      <div className={styles.image_first_section_mobile}>
+            <Image
+              src="/images/iphone_mobile.svg"
+              alt="Avatar"
+              width={500}
+              height={577}
+              priority
+            />
+      </div>
     </section>
   );
 };
