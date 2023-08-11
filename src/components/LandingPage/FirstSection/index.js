@@ -1,15 +1,14 @@
 import Image from "next/image";
+import { StarRating } from "@/components/Icons/Star";
 import { H1 } from "@/components/Text/H1";
 import styles from "@/styles/components/landingPage.module.css";
 import Button from "@/components/Buttons";
 
 const FirsSection = () => {
+  
   const handleClick = () => {
     console.log("sign up...");
   };
-
-  const starCount = 5;
-  const starArray = Array.from({ length: starCount }, (_, index) => index);
 
   return (
     <section className={styles.landing_page}>
@@ -45,16 +44,7 @@ const FirsSection = () => {
 
           <div>
             <div className={styles.image_start}>
-              {starArray.map((starIndex) => (
-                <Image
-                  key={starIndex}
-                  src="/images/star.svg"
-                  alt="star"
-                  width={20}
-                  height={20}
-                  priority
-                />
-              ))}
+              <StarRating count={5} />
               <p className={styles.rating_landing_page}>5.0</p>
             </div>
             <p className={styles.text_rating_landing_page}>from 200+ reviews</p>
