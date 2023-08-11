@@ -28,6 +28,10 @@
     width: 50%;
 }
 
+.button_avatar_mobile{
+    display: none;
+}
+
 .cards_second_section{
     display: flex;
     padding: 80px 64px;
@@ -68,6 +72,10 @@
 
 .image_star_third{
     display: flex;
+}
+
+.image_first_section_mobile{
+    display: none;
 }
 .number_text_second_section{
     color: var(--blue-600, #1570EF);
@@ -225,7 +233,9 @@
     width: 48%;
     padding-left: 48px;
 }
-
+.third_section_secondary_mobile{
+    display: none;
+}
 .rating_landing_page{
     color: var(--gray-700, #344054);
     font-size: 16px;
@@ -304,4 +314,119 @@
     font-style: normal;
     font-weight: 400;
     line-height: 30px; /* 150% */
+}
+
+@media only screen and (max-width: 768px) {
+
+    .accordion{
+        width: 100%;
+    }
+
+    .avatar_landing_page{
+        width: 100%;
+    }
+
+    .button_landing_page{
+        width: 100%;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .button_avatar{
+        display: none;
+    }
+
+    .button_avatar_mobile{
+        display: flex;
+        margin: 24px 0px;
+    }
+
+    .cards_second_section{
+        flex-direction: column;
+    }
+
+    .landing_page{
+        width: 100%;
+        flex-direction: column;
+        padding: 16px;
+    }
+
+    .image_first_section{
+        display: none;
+    }
+
+    .image_first_section_mobile{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .text_landing_page{
+        width: 100%;
+    }
+
+    .title_second_section{
+        width: 82%;
+        color: var(--gray-900, #101828);
+        text-align: center;
+        font-weight: 600;
+        line-height: 38px;
+    }
+
+    .title_third_section{
+        color: var(--gray-900, #101828);
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 38px; /* 126.667% */
+    }
+
+    .third_section_landing_page{
+        width: 100%;
+        padding: 16px;
+        flex-direction: column;
+    }
+
+    .third_section_primary{
+        width: 100%;
+    }
+
+    .third_section_secondary{
+        display: none;
+    }
+
+    .third_section_secondary_mobile{
+        display: flex;
+        margin-top: 48px;
+    }
+
+    .section_accordion{
+        width: 100%;
+    }
+
+    .second_section_landing_page{
+        margin: 96px 0px 72px 0px;
+        flex-direction: column;
+    }
+
+    .section_text_landing_page{
+        width: 100%;
+    }
+
+    .subtitle_second_section{
+        width: 60%;
+        text-align: center;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 155.556% */
+    }
+
+    .section_faq{
+        width: 100%;
+      margin-top: 50px;
+      padding: 16px;
+    }
+
+
 }

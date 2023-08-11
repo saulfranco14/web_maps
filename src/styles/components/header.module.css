@@ -54,4 +54,21 @@
 
 @media only screen and (max-width: 768px) {
 
+    .buttons_header{
+        display: none;
+    }
+
+    .image_header{
+        height: 32px;
+    }
+
+    .navigation_header{
+        display: none
+    }
+
+    .section_header{
+        padding: 0px 32px 0px 10px;
+        justify-content: start;
+    }
+
 }

@@ -2,6 +2,11 @@
     margin: 16px 0px 16px 0px;
 }
 
+.buttons_app{
+    display: flex;
+    flex-direction: column;
+}
+
 .link_button_footer{
     color: var(--gray-200, #EAECF0);
     font-family: Inter;
@@ -30,7 +35,8 @@
     width: 100%;
     height: 400px;
     background: var(--gray-800, #1D2939);
-    padding: 64px 64px 0px 64px;
+    padding: 48px 16px 0px 16px;
+
 }
 
 .second_section_footer{
@@ -41,6 +47,10 @@
     align-items: flex-start;
     gap: 32px;
     align-self: stretch;
+}
+
+.second_section_footer_mobile{
+    display: none;
 }
 
 .social_network_footer{
@@ -82,4 +92,61 @@
     width: 100%;
     margin: 32px 0px;
     padding-right: 40px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .buttons_footer{
+        margin-top: 48px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid #475467;
+    }
+
+    .buttons_app{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+    
+
+    .first_section_footer{
+        flex-direction: column;
+    }
+    .section_footer{
+        height: auto;
+    }
+
+    .second_section_footer{
+        display: none;
+    }
+    
+    .second_section_footer_mobile{
+        display: flex;
+        margin-top: 32px;
+        padding-bottom: 24px;
+        align-items: flex-start;
+        gap: 32px;
+        align-self: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .second_section_footer_mobile .link_button_footer {
+        flex-basis: calc(45%); /* Ajusta el porcentaje y el espacio entre íconos */
+      
+    }
+
+    .third_section_footer{
+        flex-direction: column;
+        margin: 0px;
+        padding: 32px 0px 32px 0px;
+        flex-direction: column-reverse;
+        gap: 24px;
+    }
+
+    .text_footer{
+        width: 100%;
+    }
 }

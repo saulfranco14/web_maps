@@ -23,25 +23,39 @@ const Footer = () => {
           </p>
         </div>
 
+        <div className={styles.second_section_footer_mobile}>
+          {footerLinks.map((link, index) => (
+            <Link
+              href={link.href}
+              key={index}
+              className={styles.link_button_footer}
+            >
+              {link.text}
+            </Link>
+          ))}
+        </div>
+
         <div className={styles.buttons_footer}>
           <p className={styles.text_button_footer}>Get the app</p>
-          <div className={styles.apple_button}>
-            <Image
-              src="/images/apple_button.svg"
-              alt="Logo"
-              width={135}
-              height={40}
-              priority
-            />
-          </div>
-          <div className={styles.android_button}>
-            <Image
-              src="/images/android_button.svg"
-              alt="Logo"
-              width={135}
-              height={40}
-              priority
-            />
+          <div className={styles.buttons_app}>
+            <div className={styles.apple_button}>
+              <Image
+                src="/images/apple_button.svg"
+                alt="Logo"
+                width={135}
+                height={40}
+                priority
+              />
+            </div>
+            <div className={styles.android_button}>
+              <Image
+                src="/images/android_button.svg"
+                alt="Logo"
+                width={135}
+                height={40}
+                priority
+              />
+            </div>
           </div>
         </div>
       </div>
