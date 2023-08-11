@@ -1,9 +1,9 @@
 
-
+import { Header } from "@/components/Header";
 const index = () => {
   return (
     <>
-        <h1>Web Maps</h1>
+       <Header/>
     </>
   );
 };
