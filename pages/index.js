@@ -5,6 +5,8 @@ import { SecondSection } from "@/components/LandingPage/SecondSection";
 import { ThirdSection } from "@/components/LandingPage/ThirdSection";
 import { Faq } from "@/components/LandingPage/Faq";
 import { FourSection } from "@/components/LandingPage/FourSection";
+import { Footer } from "@/components/Footer";
+
 const index = () => {
   return (
     <>
@@ -14,6 +16,7 @@ const index = () => {
        <ThirdSection />
        <Faq />
        <FourSection />
+       <Footer />
     </>
   );
 };
