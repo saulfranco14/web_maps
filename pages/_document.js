@@ -12,7 +12,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
         </Head>
-        <body>
+        <body style={{ background: '#F9FAFB'}}>
           <Main />
           <NextScript />
         </body>
