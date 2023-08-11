@@ -12,7 +12,7 @@ const ThirdSection = () => {
           <StarRating count={5} />
         </div>
         <p className={styles.title_third_section}>
-          We've really sped up our workflow with Company and haven't looked
+          We&apos;ve really sped up our workflow with Company and haven&apos;t looked
           back.
         </p>
         <div className={styles.section_avatar}>
