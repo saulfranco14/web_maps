@@ -35,7 +35,7 @@ const Login = () => {
         </div>
         <Button
           text="Sign In"
-          onClick={() => handleClick("/login")}
+          onClick={() => handleClick("/dashboard")}
           typeCss={"button_blue"}
         />
         <div className={styles.text_footer_login}>
