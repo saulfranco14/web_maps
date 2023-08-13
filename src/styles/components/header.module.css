@@ -1,4 +1,13 @@
-@import '../global.module.css';
+
+.header{
+    border-bottom: 1px solid var(--gray-200, #EAECF0);
+}
+
+.buttons_dashboard{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
 .section_header{
     display: flex;
@@ -10,13 +19,15 @@
     flex-shrink: 0;
     margin: 0 auto;
     background: var(--gray-50, #F9FAFB);
-
 }
 
 .margin_left_40{
     margin-left: 40px;
 }
-
+.icons_filter{
+    display: flex;
+    filter: invert(12%) sepia(33%) saturate(0%) hue-rotate(292deg) brightness(103%) contrast(102%);
+}
 .image_header{
     width: 142px;
     height: 20px;

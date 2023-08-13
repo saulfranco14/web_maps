@@ -10,7 +10,7 @@ import { Footer } from "@/components/Footer";
 const index = () => {
   return (
     <>
-       <Header />
+       <Header typeHeader={'public'} />
        <FirsSection />
        <SecondSection />
        <ThirdSection />
