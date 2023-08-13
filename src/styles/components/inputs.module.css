@@ -24,3 +24,12 @@
     border: 1px solid var(--gray-300, #D0D5DD);
     background: var(--base-white, #FFF);
 }
+
+.label{
+    color: var(--gray-700, #344054);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+    margin: 0px;
+}

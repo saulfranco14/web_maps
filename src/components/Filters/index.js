@@ -1,9 +1,34 @@
+import React, { useState } from "react";
 import styles from "@/styles/components/filters.module.css";
+import stylesModal from "@/styles/components/modal.module.css";
 import Button from "@/components/Buttons";
 import { TextInput } from "@/components/Inputs";
+import { useRouter } from "next/router";
+import { Modal } from "@/components/Modal";
+import { countries, genders, states } from "@/utils/components/inputs";
+import { SelectInput } from "@/components/Inputs/select";
+
 
 const Filters = () => {
-  const handleClick = () => {};
+  const router = useRouter();
+
+  const handleClick = (url) => {
+    router.push(url);
+  };
+
+  const handleCreate = () => {};
+
+  /*Modal Structure*/
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <section className={styles.filter}>
       <div className={styles.section_filter}>
@@ -39,13 +64,66 @@ const Filters = () => {
         />
         <Button
           text="Nuevo Usuario"
-          onClick={() => handleClick("")}
+          onClick={openModal}
           typeCss={"button_blue"}
           icon={"icon_plus.svg"}
           iconPosition="start"
           buttonWidth="250px"
         />
       </div>
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <div className={styles.text_modal}>
+          <p className={stylesModal.title_modal}>Agregar Nuevo Usuario</p>
+          <p className={stylesModal.subtitle_modal}>
+            This blog post has been published. Team members will be able to edit
+            this post and republish changes.
+          </p>
+        </div>
+
+        <div className={stylesModal.inputs_modal}>
+          <TextInput
+            name={"name_user"}
+            typeInput="text"
+            placeHolder="Marta Sahagun"
+            label={"Nombre"}
+          />
+          <SelectInput
+            name="country_user"
+            options={countries}
+            placeHolder="Selecciona un país"
+            label="País"
+          />
+          <SelectInput
+            name="state_user"
+            options={states}
+            placeHolder="Selecciona un estado"
+            label="Estado"
+          />
+          <SelectInput
+            name="gener_user"
+            options={genders}
+            placeHolder="Selecciona un género"
+            label="Género"
+          />
+        </div>
+
+        <div className={`flex flex-col ${stylesModal.buttons_modal}`}>
+          <Button
+            text="Cancel"
+            onClick={closeModal}
+            typeCss={"button_white_border"}
+            buttonWidth="100%"
+            className="w-1/2"
+          />
+          <Button
+            text="Confirm"
+            typeCss={"button_blue"}
+            onClick={() => handleCreate("confirm")}
+            buttonWidth="100%"
+            className="w-1/2"
+          />
+        </div>
+      </Modal>
     </section>
   );
 };
