@@ -1,14 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/components/table.module.css"
-import { useTable, usePagination } from "react-table"
-import { data } from '@/utils/components/table'
+import styles from "@/styles/components/table.module.css";
+import { useTable, usePagination } from "react-table";
+import { data } from "@/utils/components/table";
 import Button from "@/components/Buttons";
 
-
 const Table = () => {
- 
-
   const columns = [
     {
       Header: <input type="checkbox" />,
@@ -98,18 +95,22 @@ const Table = () => {
           ))}
         </thead>
         <tbody {...getTableBodyProps()}>
-          {page.map((row) => {
+          {page.map((row, rowIndex) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
-                {row.cells.map((cell, index) => {
+              <tr key={rowIndex} {...row.getRowProps()}>
+                {row.cells.map((cell, cellIndex) => {
                   return (
                     <td
+                      key={cellIndex}
                       className={styles.td_table}
                       {...cell.getCellProps()}
                       style={{
-                        width: index === 0 || index === 1 ? "5vh" : undefined,
-                        padding: index === 0 || (index === 1 && "0"),
+                        width:
+                          cellIndex === 0 || cellIndex === 1
+                            ? "5vh"
+                            : undefined,
+                        padding: cellIndex === 0 || (cellIndex === 1 && "0"),
                       }}
                     >
                       <p
@@ -134,14 +135,15 @@ const Table = () => {
       <div className={styles.pagination_table}>
         <Button
           text="Previous"
-          onClick={() => previousPage()} disabled={!canPreviousPage}
+          onClick={() => previousPage()}
+          disabled={!canPreviousPage}
           typeCss={"button_white_border"}
-        />
-        {" "}
+        />{" "}
         <p className={styles.pagination_text_table}>Page 1 of 10</p>
         <Button
           text="Next"
-          onClick={() => nextPage()} disabled={!canNextPage}
+          onClick={() => nextPage()}
+          disabled={!canNextPage}
           typeCss={"button_white_border"}
         />
       </div>
