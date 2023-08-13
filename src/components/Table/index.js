@@ -78,10 +78,11 @@ const Table = () => {
     <div className={styles.section_table}>
       <table {...getTableProps()} className={styles.table}>
         <thead>
-          {headerGroups.map((headerGroup) => (
-            <tr {...headerGroup.getHeaderGroupProps()}>
+          {headerGroups.map((headerGroup, index) => (
+            <tr key={index} {...headerGroup.getHeaderGroupProps()}>
               {headerGroup.headers.map((column, index) => (
                 <th
+                  key={index}
                   style={{
                     padding: index === 0 || (index === 1 && "0"),
                   }}
