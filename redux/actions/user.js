@@ -75,7 +75,6 @@ export function createUser(data) {
     try {
       // Make POST request to the API with the provided data as the request body
       const response = await clientAxios.post(`/usuarios`, data);
-      console.log("RESPONSE", response.data);
 
       // Dispatch success action with the retrieved data
       dispatch(successCreateUser(response.data));
@@ -84,7 +83,7 @@ export function createUser(data) {
       if (response.status === 201 && !response.data?.error) {
         SweetAlertBasic(
           "success",
-          "Ups",
+          "¡Felicidades!",
           "Se ha creado el usuario exitosamente."
         );
         // Call getAllUsers to fetch updated list of users
@@ -124,6 +123,11 @@ export function deleteUser(userId) {
 
       // Dispatch success action
       dispatch(successDeleteUser(userId));
+      SweetAlertBasic(
+        "success",
+        "¡Bien hecho!",
+        "Se ha borrado el usuario permanentemente."
+      );
     } catch (error) {
       // Dispatch error action and display an alert
       console.error("Error: ", error);

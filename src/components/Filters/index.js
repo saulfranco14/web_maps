@@ -21,7 +21,6 @@ const Filters = () => {
     router.push(url);
   };
 
-  /*Modal Structure*/
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
