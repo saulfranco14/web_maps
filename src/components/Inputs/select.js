@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "@/styles/components/inputs.module.css";
 
-const SelectInput = ({ options, placeHolder, name, label }) => {
+const SelectInput = ({ options, placeHolder, name, label, value, onChange }) => {
   return (
     <>
       {label && (
@@ -13,6 +13,8 @@ const SelectInput = ({ options, placeHolder, name, label }) => {
         name={name}
         id={name}
         className={styles.input}
+        value={value}
+        onChange={onChange}
       >
         <option value="" disabled>
           {placeHolder}

@@ -1,5 +1,5 @@
 import clientAxios from "../../config/axios";
-import { SweetAlertBasic } from "../../utils/sweet";
+import { SweetAlertBasic } from "@/utils/components/sweet";
 import {
   USER_ALL_ERROR,
   USER_ALL_LOADING,
@@ -75,22 +75,29 @@ export function createUser(data) {
     try {
       // Make POST request to the API with the provided data as the request body
       const response = await clientAxios.post(`/usuarios`, data);
-      console.log("RESPONSE", response);
+      console.log("RESPONSE", response.data);
 
       // Dispatch success action with the retrieved data
-      dispatch(successCreateUser(error));
+      dispatch(successCreateUser(response.data));
+
+      // Check if the status is 201 and there are no error messages in the response
+      if (response.status === 201 && !response.data?.error) {
+        SweetAlertBasic(
+          "success",
+          "Ups",
+          "Se ha creado el usuario exitosamente."
+        );
+        // Call getAllUsers to fetch updated list of users
+        dispatch(getAllUsers());
+      }
     } catch (error) {
       // Dispatch error action and display an alert
       console.error("Error: ", error);
       dispatch(errorCreateUser(error));
-      SweetAlertBasic(
-        "error",
-        "Ups",
-        "Hubo un error al crear el usuario, intente más tarde."
-      );
     }
   };
 }
+
 
 // Actions to get all users
 export const initDeleteUser = () => ({
