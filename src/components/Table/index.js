@@ -2,10 +2,10 @@ import React from "react";
 import Image from "next/image";
 import styles from "@/styles/components/table.module.css";
 import { useTable, usePagination } from "react-table";
-import { data } from "@/utils/components/table";
 import Button from "@/components/Buttons";
 
-const Table = () => {
+const Table = ({ users }) => {
+  
   const columns = [
     {
       Header: <input type="checkbox" />,
@@ -14,7 +14,7 @@ const Table = () => {
       Cell: ({ row }) => (
         <input
           type="checkbox"
-          checked={row.original.selected}
+          checked={row?.original?.selected}
           onChange={() => handleCheckboxChange(row)}
         />
       ),
@@ -24,7 +24,7 @@ const Table = () => {
       accessor: "avatar",
       style: { width: "5vh" },
       Cell: ({ value }) => (
-        <Image src={`/images/${value}`} alt="Avatar" width={50} height={50} />
+        <Image src={`/images/${value}.svg`} alt="Avatar" width={50} height={50} />
       ),
     },
     { Header: " ", accessor: "name" },
@@ -60,7 +60,7 @@ const Table = () => {
   } = useTable(
     {
       columns,
-      data,
+      data: users,
     },
     usePagination
   );
@@ -70,8 +70,11 @@ const Table = () => {
   };
 
   const handleCheckboxChange = (row) => {
-    row.original.selected = !row.original.selected;
-    prepareRow(row);
+    const updatedRow = {
+      ...row.original,
+      selected: !row.original.selected || false, 
+    };
+  
   };
 
   return (
