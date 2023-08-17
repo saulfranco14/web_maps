@@ -1,0 +1,28 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "name": "Usuario 1",
+      "gener": "Mujer",
+      "country": "México",
+      "state": "CDMX",
+      "avatar": "avatar_1"
+    },
+    {
+      "id": 2,
+      "name": "Usuario 2",
+      "gener": "Mujer",
+      "country": "México",
+      "state": "CDMX",
+      "avatar": "avatar_2"
+    },
+    {
+      "id": 3,
+      "name": "Usuario 3",
+      "gener": "Mujer",
+      "country": "México",
+      "state": "CDMX",
+      "avatar": "avatar_3"
+    }
+  ]
+}
