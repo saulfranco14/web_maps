@@ -5,7 +5,6 @@ import { useTable, usePagination } from "react-table";
 import Button from "@/components/Buttons";
 
 const Table = ({ users }) => {
-  
   const columns = [
     {
       Header: <input type="checkbox" />,
@@ -24,7 +23,15 @@ const Table = ({ users }) => {
       accessor: "avatar",
       style: { width: "5vh" },
       Cell: ({ value }) => (
-        <Image src={`/images/${value}.svg`} alt="Avatar" width={50} height={50} />
+        <Image
+          src={`/images/${value}.svg`}
+          alt="Avatar"
+          width={50}
+          height={50}
+          onError={(e) => {
+            e.target.src = "/images/avatar_header.svg"; 
+          }}
+        />
       ),
     },
     { Header: " ", accessor: "name" },
@@ -72,9 +79,8 @@ const Table = ({ users }) => {
   const handleCheckboxChange = (row) => {
     const updatedRow = {
       ...row.original,
-      selected: !row.original.selected || false, 
+      selected: !row.original.selected || false,
     };
-  
   };
 
   return (
@@ -87,7 +93,7 @@ const Table = ({ users }) => {
                 <th
                   key={index}
                   style={{
-                    padding: index === 0 || (index === 1 && "0"),
+                    padding: index === 0 || (index === 1 && "0px"),
                   }}
                   className={styles.th_table}
                   {...column.getHeaderProps()}
@@ -114,7 +120,7 @@ const Table = ({ users }) => {
                           cellIndex === 0 || cellIndex === 1
                             ? "5vh"
                             : undefined,
-                        padding: cellIndex === 0 || (cellIndex === 1 && "0"),
+                        padding: cellIndex === 0 || (cellIndex === 1 && "0px"),
                       }}
                     >
                       <p

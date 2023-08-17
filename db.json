@@ -39,22 +39,6 @@
       "country": "México",
       "state": "CDMX",
       "avatar": "avatar_5"
-    },
-    {
-      "id": 6,
-      "name": "Andrea Ordaz",
-      "gener": "Mujer",
-      "country": "México",
-      "state": "CDMX",
-      "avatar": "avatar_6"
-    },
-    {
-      "id": 7,
-      "name": "Fernando García",
-      "gener": "Hombre",
-      "country": "México",
-      "state": "CDMX",
-      "avatar": "avatar_7"
     }
   ]
 }
