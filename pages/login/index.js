@@ -25,11 +25,11 @@ const Login = () => {
         <p className={styles.title_login}>Welcome back</p>
         <p className={styles.subtitle_login}>Please enter your details.</p>
         <div className={styles.section_input}>
-          <TextInput typeInput="text" placeHolder="Enter your email" />
-          <TextInput typeInput="password" placeHolder="••••••••" />
+          <TextInput type="text" placeHolder="Enter your email" />
+          <TextInput type="password" placeHolder="••••••••" />
         </div>
         <div className={styles.section_radio}>
-          <TextInput typeInput="checkbox" />
+          <TextInput type="checkbox" />
           <p className={styles.text_radio}>Remember for 30 days</p>
           <p className={styles.text_forgot_password}>Forgot password</p>
         </div>
