@@ -16,3 +16,12 @@
     display: flex;
     width: 100%; 
 }
+
+.loading_table{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+}

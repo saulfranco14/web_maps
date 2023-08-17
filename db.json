@@ -2,27 +2,59 @@
   "usuarios": [
     {
       "id": 1,
-      "name": "Usuario 1",
-      "gener": "Mujer",
+      "name": "Carlos Martinez",
+      "gener": "Hombre",
       "country": "México",
       "state": "CDMX",
       "avatar": "avatar_1"
     },
     {
       "id": 2,
-      "name": "Usuario 2",
-      "gener": "Mujer",
+      "name": "Augusto Roberts",
+      "gener": "Hombre",
       "country": "México",
       "state": "CDMX",
       "avatar": "avatar_2"
     },
     {
       "id": 3,
-      "name": "Usuario 3",
+      "name": "Camila Hernandez",
       "gener": "Mujer",
       "country": "México",
       "state": "CDMX",
       "avatar": "avatar_3"
+    },
+    {
+      "id": 4,
+      "name": "Eduardo Jimenez",
+      "gener": "Hombre",
+      "country": "México",
+      "state": "CDMX",
+      "avatar": "avatar_4"
+    },
+    {
+      "id": 5,
+      "name": "Gabriela Fuentes",
+      "gener": "Mujer",
+      "country": "México",
+      "state": "CDMX",
+      "avatar": "avatar_5"
+    },
+    {
+      "id": 6,
+      "name": "Andrea Ordaz",
+      "gener": "Mujer",
+      "country": "México",
+      "state": "CDMX",
+      "avatar": "avatar_6"
+    },
+    {
+      "id": 7,
+      "name": "Fernando García",
+      "gener": "Hombre",
+      "country": "México",
+      "state": "CDMX",
+      "avatar": "avatar_7"
     }
   ]
 }
