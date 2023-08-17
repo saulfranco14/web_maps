@@ -1,10 +1,17 @@
-import React from "react";
-import Image from "next/image";
-import styles from "@/styles/components/table.module.css";
-import { useTable, usePagination } from "react-table";
+import React from "react"
+import Image from "next/image"
+import { useDispatch } from "react-redux";
+import styles from "@/styles/components/table.module.css"
+import { useTable, usePagination } from "react-table"
 import Button from "@/components/Buttons";
+import { SweetAlerConfirm } from '@/utils/components/sweet'
+import { deleteUser } from "../../../redux/actions/user";
+
 
 const Table = ({ users }) => {
+
+  const dispatch = useDispatch();
+
   const columns = [
     {
       Header: <input type="checkbox" />,
@@ -72,8 +79,14 @@ const Table = ({ users }) => {
     usePagination
   );
 
-  const handleDelete = (row) => {
-    console.log("Delete", row.original);
+  const handleDelete = async  (row) => {
+    const alertConfirm = await SweetAlerConfirm()
+
+    if (alertConfirm.isConfirmed) {
+      dispatch(deleteUser(row?.original?.id));
+    } else {
+      console.log("Cancel confirm...");
+    }
   };
 
   const handleCheckboxChange = (row) => {

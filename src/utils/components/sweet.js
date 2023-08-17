@@ -15,3 +15,16 @@ export const  SweetAlertFooter = (icon, title, text, footer) => {
         footer,
     })
 }
+
+export const SweetAlerConfirm = () => {
+    return Swal.fire({
+        title: '¿Estás seguro?',
+        text: 'Esta acción eliminará el usuario de forma permanente.',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, eliminar',
+        cancelButtonText: 'Cancelar',
+    });
+  };
