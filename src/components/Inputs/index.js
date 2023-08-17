@@ -10,7 +10,7 @@ const TextInput = ({ type, placeHolder, name, label, value, onChange }) => {
         placeholder={placeHolder}
         name={name}
         id={name}
-        className={styles.input}
+        className={type === 'checkbox' ? styles.input_radio : styles.input}
         autoComplete="new-password"
         value={value}
         onChange={onChange}
